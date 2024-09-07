@@ -10,16 +10,16 @@ import pro from '../assest/profile.png';
 
 function Navbar({ isOpen, toggleSidebar }) {
   return (
-    <div className={`h-16 w-full flex justify-between shadow-md sticky top-0 bg-white`}>
+    <div className={`h-16 w-full flex justify-between shadow-md sticky top-0 z-10 bg-white`}>
       <div className="flex gap-4 justify-center items-center">
-        <div className={`h-16 bg-[#6673FC] flex justify-between items-center px-4  transition-all duration-300 ${isOpen ? 'w-60' : 'w-16'} `}>
+        <div className={`h-16 bg-[#6673FC] flex justify-between items-center px-4  transition-all duration-300  ${isOpen ? 'w-60' : 'w-16'} `}>
           <div className="flex items-center gap-2">
             <img src={icon} alt="icon" className="w-10 h-9" />
             {isOpen && <h1 className="font-poppins text-2xl text-white">Medical</h1>}
           </div>
         </div>
 
-        <button onClick={toggleSidebar} className="">
+        <button onClick={toggleSidebar} className="hidden md:flex">
           <FiMenu size={28} />
         </button>
 
