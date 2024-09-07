@@ -85,7 +85,7 @@ function SideBar({ isOpen }) {
                             <div className="flex gap-4 justify-center items-center">
                                 {
                                 item.num ?
-                                 <p className={`bg-[${item.color}]hidden sm:flex text-white text-sm font-poppins w-8 h-5 rounded-full flex items-center justify-center`}>{item.num}</p> :
+                                 <p className={`bg-[${item.color}] hidden sm:flex text-white text-sm font-poppins w-8 h-5 rounded-full flex items-center justify-center`}>{item.num}</p> :
                                  ""
                                 }
                                 {
