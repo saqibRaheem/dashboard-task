@@ -10,7 +10,6 @@ function Card({ title, number, chart, color }) {
                 <div className='w-28 h-16 flex items-center justify-center'>
                     {chart}
                 </div>
-
             </div>
             <ProgressBar progress={65} color={color} />
         </div>

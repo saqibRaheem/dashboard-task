@@ -81,21 +81,32 @@ function SideBar({ isOpen }) {
                             {getIcon(item.icon)}
                                 {isOpen && <span>{item.name}</span>}
                             </div>
-                           <div className="flex gap-4 justify-center items-center relative">
-                                {
-                                item.num ?
-                                 <p style={{ backgroundColor: item.color}} className={` w-6 h-4 relative right-2 bottom-2 md:w-8 md:h-5 md:right-0 md:bottom-0 flex text-white text-sm font-poppins  rounded-full items-center justify-center`}>{item.num}</p> :
-                                 ""
-                                }
-                                {
-                                    item.name === 'Calendar' || item.name === 'Widget' ? 
-                                     "" :
+                            <div className="flex gap-2 justify-center items-center relative">
+  {item.num ? (
+    <p
+      style={{ backgroundColor: item.color }}
+      className={`${
+        isOpen ? 'w-6 h-4 text-sm md:w-8 md:h-5' : 'hidden'
+      } relative right-9 bottom-2 md:right-0 md:bottom-0 flex text-white font-poppins rounded-full items-center justify-center leading-none m-0`}
+    >
+      {item.num}
+    </p>
+  ) : (
+    ""
+  )}
 
-                            <FiChevronRight
-                                className={`mt-1 ml-2 md:mt-0 sm:ml-0 transition-transform duration-300 ${activeItem === index ? 'rotate-90' : ''}`}
-                            />
-                                }
-                            </div>
+  {item.name !== 'Calendar' && item.name !== 'Widget' && (
+    <FiChevronRight
+      className={`${
+        isOpen ? 'ml-2 mt-1 md:ml-0' : 'ml-1'
+      } transition-transform duration-300 ${
+        activeItem === index ? "rotate-90" : ""
+      }`}
+    />
+  )}
+</div>
+
+
                         </li>
                     )
                 }
