@@ -1,5 +1,5 @@
 import React from 'react'
-import { FaAngleDown } from "react-icons/fa";
+import { FaAngleDown,FaPencilAlt } from "react-icons/fa";
 import { RxCross2 } from "react-icons/rx";
 import {tableData} from '../data/data'
 
@@ -40,11 +40,11 @@ function Table() {
           <td className="px-4 py-2">{patient.room}</td>
           <td className="px-4 py-2">
             <div className="flex gap-2">
-              <button className="text-green-600">
-                <i className="fas fa-edit"></i> {/* Replace with proper icon */}
+              <button className="text-[#4CAF50] w-8 h-8 rounded-lg bg-[#00FF0A33] flex justify-center items-center">
+                <FaPencilAlt /> 
               </button>
-              <button className="text-red-600">
-                <i className="fas fa-trash-alt"></i> {/* Replace with proper icon */}
+              <button className="text-red-600 w-8 h-8 rounded-lg bg-[#FF440033]">
+                 {/* Replace with proper icon */}
               </button>
             </div>
           </td>

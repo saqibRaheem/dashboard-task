@@ -19,7 +19,7 @@ function Navbar({ isOpen, toggleSidebar }) {
           </div>
         </div>
 
-        <button onClick={toggleSidebar} className="hidden md:flex">
+        <button onClick={toggleSidebar} className="hidden sm:flex">
           <FiMenu size={28} />
         </button>
 

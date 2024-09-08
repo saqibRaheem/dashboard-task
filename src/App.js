@@ -31,9 +31,11 @@ function App() {
     <div className='flex flex-col h-screen w-full'>
       <Navbar isOpen={isOpen} toggleSidebar={toggleSidebar} />
       <div className='flex '>
+        
         <SideBar isOpen={isOpen} />
+        
         <div className='flex-1'>
-          <Dashboard />
+          <Dashboard  />
         </div>
       </div>
       <Footer />

@@ -14,7 +14,7 @@ const COLORS = ['#b2bcbc', '#5171bc', '#40c7c2'];
 
 function Dashboard() {
   return (
-    <div className='bg-[#EAEEF3] w-full h-full '>
+    <div className={`bg-[#EAEEF3] w-full h-full`}>
       <div className="flex justify-between items-center p-5">
         <h2 className='hidden sm:flex text-[#666666] font-poppins text-2xl font-semibold tracking-widest'>Dashboard</h2>
         <p className='flex justify-center items-center gap-1 w-52 h-14 rounded-full bg-[#DCD0D04D] text-[#888888] font-poppins'> <FaHome className='text-[#AAAAAA]' /> Home <FaAngleRight className='text-[#AAAAAA]' /> <span className='text-black'>Dashboard</span> </p>
@@ -179,6 +179,7 @@ function Dashboard() {
           }
         />
       </div>
+
     <div className="grid grid-cols-1 p-5">
       <Table />
     </div>

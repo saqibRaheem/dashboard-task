@@ -47,7 +47,7 @@ function SideBar({ isOpen }) {
     };
 
     return (
-        <div className={`h-screen bg-white transition-all duration-300  ${isOpen ? 'w-60' : 'w-16'}`}>
+        <div className={`h-screen bg-white transition-all duration-300 ${isOpen ? 'w-60' : 'w-16'}`}>
             {/* Toggle button for mobile */}
        {/* <div className="fixed left-0"> */}
             {/* Profile Section */}
@@ -85,7 +85,7 @@ function SideBar({ isOpen }) {
                             <div className="flex gap-4 justify-center items-center">
                                 {
                                 item.num ?
-                                 <p className={`bg-[${item.color}] hidden sm:flex text-white text-sm font-poppins w-8 h-5 rounded-full flex items-center justify-center`}>{item.num}</p> :
+                                 <p className={`bg-[${item.color}] w-6 h-4 relative right-2 bottom-2 md:w-8 md:h-5 md:right-0 md:bottom-0 flex text-white text-sm font-poppins  rounded-full items-center justify-center`}>{item.num}</p> :
                                  ""
                                 }
                                 {
