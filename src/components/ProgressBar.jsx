@@ -15,9 +15,12 @@ function ProgressBar({progress,color}) {
   return (
     <div className="w-full bg-gray-200 rounded-full h-2">
       <div
-        className={`bg-[${color}] h-2 rounded-full transition-all duration-700 ease-out`}
-        style={{ width: `${displayProgress}%` }}
-      ></div>
+  className="h-2 rounded-full transition-all duration-700 ease-out"
+  style={{
+    width: `${displayProgress}%`,
+    backgroundColor: color,  // Apply the color as an inline style
+  }}
+></div>
     </div>
   )
 }

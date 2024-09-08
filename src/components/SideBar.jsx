@@ -81,11 +81,10 @@ function SideBar({ isOpen }) {
                             {getIcon(item.icon)}
                                 {isOpen && <span>{item.name}</span>}
                             </div>
-                            {/* Rotate icon if the item is active */}
-                            <div className="flex gap-4 justify-center items-center">
+                           <div className="flex gap-4 justify-center items-center relative">
                                 {
                                 item.num ?
-                                 <p className={`bg-[${item.color}] w-6 h-4 relative right-2 bottom-2 md:w-8 md:h-5 md:right-0 md:bottom-0 flex text-white text-sm font-poppins  rounded-full items-center justify-center`}>{item.num}</p> :
+                                 <p style={{ backgroundColor: item.color}} className={` w-6 h-4 relative right-2 bottom-2 md:w-8 md:h-5 md:right-0 md:bottom-0 flex text-white text-sm font-poppins  rounded-full items-center justify-center`}>{item.num}</p> :
                                  ""
                                 }
                                 {
@@ -93,7 +92,7 @@ function SideBar({ isOpen }) {
                                      "" :
 
                             <FiChevronRight
-                                className={`mt-1 ml-2 md:mt-0 md:ml-0 transition-transform duration-300 ${activeItem === index ? 'rotate-90' : ''}`}
+                                className={`mt-1 ml-2 md:mt-0 sm:ml-0 transition-transform duration-300 ${activeItem === index ? 'rotate-90' : ''}`}
                             />
                                 }
                             </div>
